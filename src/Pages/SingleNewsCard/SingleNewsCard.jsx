@@ -5,7 +5,7 @@ const SingleNewsCard = ({ singleNews }) => {
   const { author, title, image_url, details, rating, total_view } = singleNews;
 
   return (
-    <div className=" border-2 w-[900px]  ml-2 mt-8">
+    <div className=" border rounded-xl w-[900px]  ml-2 mt-8">
       <div className="card">
         <div className="flex items-center mb-4 bg-base-200 p-2 ">
           <img src={author.img} className="w-10 h-10 rounded-full" />
