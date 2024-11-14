@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Header from "../../components/Header/Header";
-import LatestNews from "../../components/Header/LatestNews/LatestNews";
+import LatestNews from "../../components/LatestNews/LatestNews";
 import Navbar from "../../components/Navbar/Navbar";
-import CategoryNews from "../../Pages/CategoryNews/CategoryNews";
+
 import LeftNavbar from "../LayoutComponents/LeftNavbar/LeftNavbar";
 import RightNavbar from "../LayoutComponents/RightNavbar/RightNavbar";
 
