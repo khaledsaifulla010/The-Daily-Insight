@@ -12,26 +12,12 @@ import "../AuthStyles/AuthStyles.css";
 const LoginRegister = () => {
   return (
     <div>
-      <div className="hero w-[1300px] bg-purple-500 mt-12 mb-24 rounded-xl h-[200px] ">
-        <div>
-          <div>
-            <h1 className="text-3xl text-white font-bold text-center ">
-              Please Login
-            </h1>
-            <p className="py-6 text-center text-white font-semibold">
-              Explore the latest gadgets that will take your experience to the
-              next level. From smart devices to <br /> the coolest accessories,
-              we have it all!
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="main-container">
         <div className="container" id="main">
           <div className="sign-up">
             <form action="#">
               <h1 className="font-extrabold text-3xl ">Create Account</h1>
-              <div className="flex items-center gap-6 mt-4 mb-4">
+              {/* <div className="flex items-center gap-6 mt-4 mb-4">
                 <button className="text-3xl">
                   <FcGoogle></FcGoogle>
                 </button>
@@ -41,8 +27,8 @@ const LoginRegister = () => {
                 <button className="text-3xl text-blue-600">
                   <FaFacebook></FaFacebook>
                 </button>
-              </div>
-              <p className="font-bold text-xl ">
+              </div> */}
+              <p className="font-bold text-xl mt-2">
                 Or Use Your Email For Registration
               </p>
               <div className="mt-8 ">
@@ -76,7 +62,7 @@ const LoginRegister = () => {
           <div className="sign-in">
             <form action="#">
               <h1 className="font-extrabold text-3xl ">Please Sign In</h1>
-              <div className="flex items-center gap-6 mt-4 mb-4">
+              {/* <div className="flex items-center gap-6 mt-4 mb-4">
                 <button className="text-3xl">
                   <FcGoogle></FcGoogle>
                 </button>
@@ -86,7 +72,7 @@ const LoginRegister = () => {
                 <button className="text-3xl text-blue-600">
                   <FaFacebook></FaFacebook>
                 </button>
-              </div>
+              </div> */}
               <p className="font-bold text-xl mt-4 ">
                 Or Use Your Existing Account
               </p>

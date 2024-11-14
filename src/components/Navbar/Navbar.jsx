@@ -22,7 +22,7 @@ const Navbar = () => {
               className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow border font-bold text-base"
             >
               <li>
-                <Link>Login</Link>
+                <Link to={"/login-register"}>Login</Link>
               </li>
               <li>
                 <Link>Profile</Link>

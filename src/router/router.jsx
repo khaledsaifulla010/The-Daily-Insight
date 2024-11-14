@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout/HomeLayout";
 import CategoryNews from "../Pages/CategoryNews/CategoryNews";
+import LoginRegister from "../Authentication/LoginRegister/LoginRegister";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
           ),
       },
     ],
+  },
+  {
+    path: "/login-register",
+    element: <LoginRegister></LoginRegister>,
   },
 ]);
 
