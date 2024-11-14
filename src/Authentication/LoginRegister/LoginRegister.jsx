@@ -1,10 +1,8 @@
 import {
   FaArrowAltCircleLeft,
   FaArrowAltCircleRight,
-  FaFacebook,
-  FaGithub,
 } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+
 import AuthJS from "../AuthJS/AuthJS";
 
 import "../AuthStyles/AuthStyles.css";
