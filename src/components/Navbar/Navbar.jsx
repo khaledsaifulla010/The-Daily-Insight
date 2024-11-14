@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="navbar-start"></div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal  flex items-center gap-32 font-bold text-lg text-slate-600">
-            <NavLink to={"/home"}>Home</NavLink>
+            <NavLink to={"/"}>Home</NavLink>
             <NavLink to={"/about"}>About</NavLink>
             <NavLink to={"/career"}>Career</NavLink>
           </ul>
