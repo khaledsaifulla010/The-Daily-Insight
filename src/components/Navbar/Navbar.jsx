@@ -2,8 +2,20 @@ import { Link, NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
+import { FaSignOutAlt } from "react-icons/fa";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, signOutUser } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    signOutUser()
+      .then(() => {
+        console.log("signOut");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -36,6 +48,15 @@ const Navbar = () => {
               </li>
               <li>
                 <Link>Profile</Link>
+              </li>
+              <li>
+                {user ? (
+                  <button onClick={handleSignOut}>
+                    Sign Out <FaSignOutAlt />
+                  </button>
+                ) : (
+                  ""
+                )}
               </li>
             </ul>
           </div>
