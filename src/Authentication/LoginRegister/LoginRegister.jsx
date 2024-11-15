@@ -1,14 +1,53 @@
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import AuthJS from "../AuthJS/AuthJS";
 import "../AuthStyles/AuthStyles.css";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 
 const LoginRegister = () => {
+  const { createUser} = useContext(AuthContext);
+
+  const handleCreateUser = (e) => {
+    e.preventDefault();
+    const name = e.target.email.value;
+    const email = e.target.email.value;
+    const password = e.target.email.value;
+    console.log(name, email, password);
+
+    //create user//
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // const handleSignIn = (e) => {
+  //   e.preventDefault();
+  //   const name = e.target.email.value;
+  //   const email = e.target.email.value;
+  //   const password = e.target.email.value;
+  //   console.log(name, email, password);
+
+  //   //signIn //
+  //   signIn(email, password)
+  //     .then((result) => {
+  //       console.log(result.user);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+
   return (
     <div>
       <div className="main-container">
         <div className="container" id="main">
           <div className="sign-up">
-            <form action="#">
+            <form action="#" onSubmit={handleCreateUser}>
               <h1 className="font-extrabold text-3xl ">Create Account</h1>
               {/* <div className="flex items-center gap-6 mt-4 mb-4">
                 <button className="text-3xl">
@@ -53,7 +92,7 @@ const LoginRegister = () => {
             </form>
           </div>
           <div className="sign-in">
-            <form action="#">
+            <form action="#" >
               <h1 className="font-extrabold text-3xl ">Please Sign In</h1>
               {/* <div className="flex items-center gap-6 mt-4 mb-4">
                 <button className="text-3xl">
