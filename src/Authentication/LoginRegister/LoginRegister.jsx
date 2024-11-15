@@ -25,6 +25,7 @@ const LoginRegister = () => {
         console.log(result.user);
         toast.success("Successfully Register!");
         redirect("/");
+        e.target.reset();
       })
       .catch((error) => {
         console.log(error);
@@ -44,6 +45,7 @@ const LoginRegister = () => {
         console.log(result.user);
         toast.success("Successfully Logged In!");
         redirect("/");
+        e.target.reset();
       })
       .catch((error) => {
         console.log(error);
