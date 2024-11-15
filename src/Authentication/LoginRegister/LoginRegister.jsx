@@ -1,10 +1,5 @@
-import {
-  FaArrowAltCircleLeft,
-  FaArrowAltCircleRight,
-} from "react-icons/fa";
-
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import AuthJS from "../AuthJS/AuthJS";
-
 import "../AuthStyles/AuthStyles.css";
 
 const LoginRegister = () => {
