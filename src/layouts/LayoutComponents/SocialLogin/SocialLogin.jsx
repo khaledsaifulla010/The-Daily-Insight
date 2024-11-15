@@ -2,7 +2,8 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../Providers/AuthProvider/AuthProvider";
 import { useContext } from "react";
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const SocialLogin = () => {
   const { signInWithGoogle } = useContext(AuthContext);
 
@@ -10,6 +11,7 @@ const SocialLogin = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
+        toast.success("Successfully Logged in!");
       })
       .catch((error) => {
         console.log(error);
