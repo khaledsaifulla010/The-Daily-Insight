@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 
 const LoginRegister = () => {
-  const { createUser} = useContext(AuthContext);
+  const { createUser, signIn } = useContext(AuthContext);
 
   const handleCreateUser = (e) => {
     e.preventDefault();
@@ -25,22 +25,22 @@ const LoginRegister = () => {
       });
   };
 
-  // const handleSignIn = (e) => {
-  //   e.preventDefault();
-  //   const name = e.target.email.value;
-  //   const email = e.target.email.value;
-  //   const password = e.target.email.value;
-  //   console.log(name, email, password);
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const name = e.target.email.value;
+    const email = e.target.email.value;
+    const password = e.target.email.value;
+    console.log(name, email, password);
 
-  //   //signIn //
-  //   signIn(email, password)
-  //     .then((result) => {
-  //       console.log(result.user);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+    //signIn //
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div>
@@ -92,7 +92,7 @@ const LoginRegister = () => {
             </form>
           </div>
           <div className="sign-in">
-            <form action="#" >
+            <form action="#" onSubmit={handleSignIn}>
               <h1 className="font-extrabold text-3xl ">Please Sign In</h1>
               {/* <div className="flex items-center gap-6 mt-4 mb-4">
                 <button className="text-3xl">
