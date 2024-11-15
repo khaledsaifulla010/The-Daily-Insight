@@ -43,6 +43,7 @@ const LoginRegister = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Successfully Logged In!");
+        redirect("/");
       })
       .catch((error) => {
         console.log(error);
