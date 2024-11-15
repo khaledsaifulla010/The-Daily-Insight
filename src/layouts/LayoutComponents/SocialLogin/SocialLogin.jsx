@@ -4,14 +4,19 @@ import { AuthContext } from "../../../Providers/AuthProvider/AuthProvider";
 import { useContext } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+
 const SocialLogin = () => {
   const { signInWithGoogle } = useContext(AuthContext);
+
+  const redirect = useNavigate();
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
         toast.success("Successfully Logged in!");
+        redirect("/");
       })
       .catch((error) => {
         console.log(error);
