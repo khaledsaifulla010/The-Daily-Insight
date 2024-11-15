@@ -5,9 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginRegister = () => {
   const { createUser, signIn } = useContext(AuthContext);
+  const redirect = useNavigate();
 
   const handleCreateUser = (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ const LoginRegister = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Successfully Register!");
+        redirect("/");
       })
       .catch((error) => {
         console.log(error);
