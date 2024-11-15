@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -15,7 +18,14 @@ const Navbar = () => {
         <div className="navbar-end">
           <div className="dropdown dropdown-bottom dropdown-end">
             <div tabIndex={0} role="button" className=" text-3xl ">
-              <FaUserCircle></FaUserCircle>
+              {user ? (
+                // <img className="border rounded-full" src= {user.photoURL} />
+                <h1 className="text-base font-black border rounded-xl p-2">
+                  {user?.displayName}
+                </h1>
+              ) : (
+                <FaUserCircle></FaUserCircle>
+              )}
             </div>
             <ul
               tabIndex={0}
