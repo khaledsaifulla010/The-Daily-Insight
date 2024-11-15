@@ -3,6 +3,8 @@ import AuthJS from "../AuthJS/AuthJS";
 import "../AuthStyles/AuthStyles.css";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginRegister = () => {
   const { createUser, signIn } = useContext(AuthContext);
@@ -19,6 +21,7 @@ const LoginRegister = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Successfully Register!");
       })
       .catch((error) => {
         console.log(error);
