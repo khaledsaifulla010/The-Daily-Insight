@@ -39,6 +39,7 @@ const LoginRegister = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Successfully Logged In!");
       })
       .catch((error) => {
         console.log(error);
